@@ -1,32 +1,100 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
   font-display: swap;
   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
   font-display: swap;
   src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-SemiBold";
+  font-family: "Gilroy";
   font-display: swap;
   src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   font-display: swap;
   src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-]:before,
+[class*=" _icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=_icon-]:before,
+[class*=" _icon-"]:before {
+  display: block;
+}
+
+._icon-arrow-down:before {
+  content: "\e900";
+}
+
+._icon-arrow-link:before {
+  content: "\e901";
+}
+
+._icon-cart:before {
+  content: "\e902";
+}
+
+._icon-favorite:before {
+  content: "\e903";
+}
+
+._icon-location:before {
+  content: "\e904";
+}
+
+._icon-phone:before {
+  content: "\e905";
+}
+
+._icon-search:before {
+  content: "\e906";
+}
+
+._icon-send:before {
+  content: "\e907";
+}
+
+._icon-share:before {
+  content: "\e908";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -61,7 +129,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "";
+  font-family: "Gilroy";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -70,7 +138,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Gilroy";
   font-size: inherit;
 }
 
@@ -121,7 +189,7 @@ h6 {
 }
 */
 body {
-  color: #000;
+  color: #3a3a3a;
 }
 body._lock {
   overflow: hidden;
@@ -135,24 +203,9 @@ body._lock {
   flex-direction: column;
 }
 ._container {
-  max-width: 1170px;
+  max-width: 1270px;
+  padding: 0 15px;
   margin: 0 auto;
-}
-@media (max-width: 1182px) {
-  ._container {
-    max-width: 970px;
-  }
-}
-@media (max-width: 991.98px) {
-  ._container {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767.98px) {
-  ._container {
-    max-width: none;
-    padding: 0 10px;
-  }
 }
 
 .button {
