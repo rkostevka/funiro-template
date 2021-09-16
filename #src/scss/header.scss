@@ -1,4 +1,246 @@
 //====================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	&__wrapper {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 50;
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+		min-height: 125px;
+	}
+
+	&__main {
+		display: flex;
+		flex: 0 0 math.div(494, 1240) *100%;
+		align-items: center;
+	}
+
+	&__logo {
+		color: $blackColor;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: math.div(29, 24) * 100%;
+	}
+
+	&__menu {
+	}
+
+	&__search {
+		@include adaptiv-value("padding-right", 32, 15, 1);
+		@media (min-width: $md2+px){
+			flex:1 1 auto;
+		}
+	}
+
+	&__actions {
+	}
+}
+.menu {
+	flex: 0 1 420px;
+	&__body {
+	}
+
+	&__list {
+		@media (min-width: $md3+px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 5px 0;
+		margin: 0 3px;
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				.menu__sub-list {
+					transform: translate(0px 0px);
+					visibility: visible;
+					opacity: 1;
+					pointer-events: auto;
+				}
+				.menu__arrow{
+					transform: rotate(-180deg);
+				}
+				.menu__arrow,
+				.menu__link {
+					color: $orangeColor;
+				}
+			}
+		}
+		@media (min-width: $md3+px){
+			&:hover {
+				.menu__sub-list {
+					transform: translate(0px 0px);
+					visibility: visible;
+					opacity: 1;
+					pointer-events: auto;
+				}
+				.menu__arrow{
+					transform: rotate(-180deg);
+				}
+				.menu__arrow,
+				.menu__link {
+					color: $orangeColor;
+				}
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		color: inherit;
+		transition: color 0.3s ease 0s;
+	}
+
+	&__arrow {
+		margin: 0 0 0 8px;
+		transition: all 0.3s ease 0s;
+		font-size: 8px;
+	}
+
+	&__sub-list {
+		position: relative;
+		background-color: $orangeColor;
+		padding: 15px;
+		flex: 1 1 100%;
+		@media (min-width: $md3+px) {
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+			transform: translate(0px 10px);;
+			visibility: hidden;
+			min-width: 200px;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			pointer-events: none;
+			z-index:5;
+		}
+	}
+
+	&__sub-item {
+		&:not(:last-child){
+			margin: 0 0 5px 0;
+		}
+	}
+
+	&__sub-link {
+		color: $whiteColor;
+		line-height: 1.2;
+	}
+}
+.search-form {
+	max-width: 473px;
+	&__icon {
+		display: none;
+	}
+
+	&__item {
+		background-color: $whiteColor;
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		flex:0 0 45px;
+		height: 45px;
+		font-size: 15px;
+		color: #333;
+	}
+
+	&__input {
+		font-size: 14px;
+		color: $darkGrayColor;
+		width: 100%;
+		padding: 0 20px 0 0;
+	}
+}
+.actions-header {
+	position: relative;
+	z-index: 5;
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-flow: column;
+	align-items: center;
+	@include adaptiv-value("gap", 32, 15, 1);
+		&__item {
+
+			&_favorites {
+				color: #262F56;
+				font-size: 24px;
+				transition: color 0.3 ease 0s;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $orangeColor;
+					}
+				}
+			}
+
+			&_user {
+				overflow: hidden;
+				border-radius: 50%;
+				@include adaptiv-value("width", 40, 30, 1);
+				@include adaptiv-value("height", 40, 30, 1);
+			}
+		}
+}
+.cart-header {
+
+	&__icon {
+		color: #262F56;
+		font-size: 24px;
+		transition: color 0.3 ease 0s;
+		position: relative;
+		display: block;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+		span {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: -10px;
+			right: -10px;
+			border-radius: 50%;
+			background-color: $orangeColor;
+			color: $whiteColor;
+			font-size: 11px;
+		}
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+}
+.cart-list {
+}
+.icon-menu {
+}
 
 //====================================================================================================
 

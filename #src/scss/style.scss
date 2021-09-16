@@ -34,12 +34,15 @@ $mainColor: #3a3a3a;
 $orangeColor: #e89f71;
 $grayColor: #898989;
 $darkGrayColor: #616161;
+$blackColor: #000;
+$whiteColor: #fff;
 
 //</VARIABLES>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
+  background: #f9f1e7;
   color: $mainColor;
   &._lock {
     overflow: hidden;
