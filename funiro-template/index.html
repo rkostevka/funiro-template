@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+	 <head>
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
@@ -10,28 +10,128 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-	<div class="header__container _container">
-
+	<body>
+		<div class="wrapper">
+			<header class="header">
+	<div class="header__wrapper">
+		<div class="header__container _container">
+			<div class="header__body">
+				<div class="header__main">
+					<a href="#" class="header__logo">Funiro.</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="" class="menu__link">Products</a>
+									<button
+										data-spoller
+										type="button"
+										class="menu__arrow _icon-arrow-down"
+									></button>
+									<ul class="menu__sub-list">
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #1</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #2</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #3</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #4</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Rooms</a>
+									<button
+										data-spoller
+										type="button"
+										class="menu__arrow _icon-arrow-down"
+									></button>
+									<ul class="menu__sub-list">
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #1</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #2</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #3</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="#" class="menu__sub-link">Product #4</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Inspirations</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="header__search">
+					<div class="search-form">
+						<button
+							type="button"
+							class="search-form__button _icon-search"
+						></button>
+						<form action="#" class="search-form__item">
+							<button
+								type="submit"
+								class="search-form__btn _icon-search"
+							></button>
+							<input
+								autocomplete="off"
+								type="text"
+								name="form[]"
+								data-value="Search for minimalist chair"
+								class="search-form__input"
+							/>
+						</form>
+					</div>
+				</div>
+				<div class="header__actions actions-header">
+					<a
+						href="#"
+						class="
+							actions-header__item actions-header__item_favorites
+							_icon-favorite
+						"
+					></a>
+					<div class="actions-header__item cart-header">
+						<a href="#" class="cart-header__icon _icon-cart"></a>
+						<div class="cart-header__body">
+							<ul class="cart-header__list cart-list"></ul>
+						</div>
+					</div>
+					<a
+						href="#"
+						class="actions-header__item actions-header__item_user _ibg"
+					>
+						<img src="img/avatar.jpg" alt="Avatar" />
+					</a>
+				</div>
+				<button type="button" class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
 	</div>
 </header>
-      <main class="page _icon-cart">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores modi
-          reiciendis fugit totam et distinctio repellat natus sequi inventore
-          eos maxime quaerat exercitationem voluptate optio expedita, doloribus
-          possimus quod. A.
-        </h1>
-      </main>
-      <footer class="footer">
+
+			<main class="page"></main>
+			<footer class="footer">
 	<div class="footer__container _container">
 
 	</div>
 </footer>
-    </div>
-    <div class="popup popup_popup">
+		</div>
+		<div class="popup popup_popup">
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close"></div>
@@ -57,5 +157,5 @@
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
-  </body>
+	</body>
 </html>
