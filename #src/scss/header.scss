@@ -16,6 +16,7 @@
 	}
 
 	&__body {
+		transition: min-height 0.3s ease 0s;
 		display: flex;
 		align-items: center;
 		padding: 5px 0;
@@ -43,6 +44,8 @@
 		font-weight: 700;
 		font-size: 24px;
 		line-height: math.div(29, 24) * 100%;
+		position: relative;
+		z-index: 5;
 	}
 
 	&__menu {
@@ -61,6 +64,34 @@
 .menu {
 	flex: 0 1 420px;
 	&__body {
+		@media (max-width: $md3+px){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			left: -100%;
+			background-color: #fcf8f3;
+			transition: left 0.3s ease 0s;
+			padding: 70px 15px 30px 15px;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: 50px;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s ease 0s;
+				background-color: #fcf8f3;
+				z-index: 2;
+			}
+			&._active {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
 	}
 
 	&__list {
@@ -113,18 +144,34 @@
 				}
 			}
 		}
+		@media (max-width: $md3+px){
+			margin: 0 0 15px 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		} 
 	}
 
 	&__link {
 		font-weight: 500;
 		color: inherit;
 		transition: color 0.3s ease 0s;
+		@media (max-width: $md3+px) {
+			font-size: 24px;
+		}
 	}
 
 	&__arrow {
 		margin: 0 0 0 8px;
 		transition: all 0.3s ease 0s;
 		font-size: 8px;
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			font-weight: 600;
+			&._active {
+				transform: rotate(-180deg);
+			}
+		}
 	}
 
 	&__sub-list {
@@ -132,7 +179,6 @@
 		background-color: $orangeColor;
 		padding: 15px;
 		flex: 1 1 100%;
-		z-index: 5;
 		@media (min-width: $md3+px) {
 			opacity: 0;
 			transition: all 0.3s ease 0s;
@@ -145,17 +191,32 @@
 			pointer-events: none;
 			z-index:5;
 		}
+		@media (max-width: $md3+px) {
+			margin: 10px -15px 0 -15px;
+		}
 	}
 
 	&__sub-item {
 		&:not(:last-child){
 			margin: 0 0 5px 0;
+			@media (max-width:$md3+px) {
+				margin: 0 0 10px 0;
+			}
 		}
 	}
 
 	&__sub-link {
 		color: $whiteColor;
 		line-height: 1.2;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		@media (max-width:$md3+px) {
+			font-size: 18px;
+
+		}
 	}
 }
 .search-form {
@@ -278,20 +339,12 @@
 .cart-list {
 }
 .icon-menu {
-}
-
-//====================================================================================================
-
-/*
-//Burger
-.icon-menu {
 	display: none;
 	@media (max-width: $md3+px) {
+		@include adaptiv-value("margin-left", 32, 15, 1);
+		position: relative;
 		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
+		flex: 0 0 30px;
 		height: 18px;
 		cursor: pointer;
 		z-index: 5;
@@ -326,4 +379,7 @@
 		}
 	}
 }
-*/
+
+//====================================================================================================
+
+
