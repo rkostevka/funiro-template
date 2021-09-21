@@ -17,16 +17,14 @@
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
-.button {
+.btn {
 	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+	justify-content: center;
+	padding: 0px 15px;
+	align-items: center;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	min-height: 48px;
 }
 //</BUTTONS>====================================================================================================
 
