@@ -306,8 +306,62 @@ body {
      }
   }
 }
-
-
 //===================================================================================================================================
 
 //</MAIN BLOCK>====================================================================================================
+//===================================================================================================================================
+
+//<Advantures>====================================================================================================
+
+.page {
+
+		&__advantages {
+		}
+}
+.advantages {
+  @include adaptiv-value("padding-top", 88, 30,1);
+  @include adaptiv-value("padding-bottom", 88, 30,1);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: inline-grid;
+    padding: 15px 0;
+    grid-template: auto auto / 85px 1fr;
+    @media (max-width: $md2+px) {
+      min-width: 280px;
+    }
+    @media (max-width: $md3+px) {
+      grid-template: auto auto / auto 1fr;
+    }
+  }
+
+  &__icon {
+    text-align: center;
+    align-self: center;
+    grid-row: span 2;
+    @media (max-width: $md3+px) {
+      padding: 0 15px 0 0;
+    }
+  }
+
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1.5;
+		margin: 0px 0px math.div(2px, 18px) * 1em 0px;
+	}
+
+	&__text {
+		line-height: 1.5;
+		color: $grayColor;
+	}
+}
+
+//===================================================================================================================================
+
+//</Advantures>====================================================================================================

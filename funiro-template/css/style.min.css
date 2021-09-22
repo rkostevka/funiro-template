@@ -1832,3 +1832,58 @@ body.ie ._ibg img {
     display: none;
   }
 }
+
+.advantages {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+@media (max-width: 1270px) {
+  .advantages {
+    padding-top: calc(30px + 58 * ((100vw - 320px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .advantages {
+    padding-bottom: calc(30px + 58 * ((100vw - 320px) / 950));
+  }
+}
+.advantages__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advantages__item {
+  display: inline-grid;
+  padding: 15px 0;
+  grid-template: auto auto/85px 1fr;
+}
+@media (max-width: 991.98px) {
+  .advantages__item {
+    min-width: 280px;
+  }
+}
+@media (max-width: 767.98px) {
+  .advantages__item {
+    grid-template: auto auto/auto 1fr;
+  }
+}
+.advantages__icon {
+  text-align: center;
+  align-self: center;
+  grid-row: span 2;
+}
+@media (max-width: 767.98px) {
+  .advantages__icon {
+    padding: 0 15px 0 0;
+  }
+}
+.advantages__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0px 0px 0.1111111111em 0px;
+}
+.advantages__text {
+  line-height: 1.5;
+  color: #898989;
+}
