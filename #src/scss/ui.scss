@@ -5,6 +5,13 @@
 	color: $blackColor;
 	font-weight: 700;
 }
+._title {
+	@include adaptiv-value("font-size", 40,24, 1);
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: center;
+	color: $mainColor;
+}
 .slider-arrows {
 	display: grid;
 	grid-template-columns: repeat(2, 48px);

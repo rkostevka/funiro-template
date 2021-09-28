@@ -25,6 +25,16 @@
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	min-height: 48px;
+	&_white {
+		color: $orangeColor;
+		background-color: $whiteColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $orangeColor;
+				color: $whiteColor;
+			}
+		}
+	}
 }
 //</BUTTONS>====================================================================================================
 
