@@ -469,7 +469,6 @@ body {
 
 		&__title {
       @include adaptiv-value("font-size", 24, 20, 1);
-      font-weight: 600;
       line-height: 1.2;
       margin: 0 0 math.div(8px, 24px) * 1em 0;
 		}
