@@ -533,6 +533,10 @@ body {
       &:not(:last-child) {
         margin: 0 0 24px 0;
       }
+      &._hold {
+        opacity: 0.4;
+        cursor: default;
+      }
 		}
 
 		&__link {
