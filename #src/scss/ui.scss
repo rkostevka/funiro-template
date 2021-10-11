@@ -24,6 +24,7 @@
 	column-gap: 8px;
 }
 .slider-arrow {
+	pointer-events: auto;
 	border-radius: 50%;
 	height: 48px;
 	background-color: rgba(232, 159, 113, 0.3);
