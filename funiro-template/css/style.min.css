@@ -2400,3 +2400,116 @@ body.ie ._ibg img {
   height: 1px;
   background-color: #616161;
 }
+.tips {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+@media (max-width: 1270px) {
+  .tips {
+    padding-top: calc(30px + 14 * ((100vw - 320px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .tips {
+    padding-bottom: calc(30px + 14 * ((100vw - 320px) / 950));
+  }
+}
+.slider-tips {
+  position: relative;
+}
+.slider-tips__body {
+  margin-left: -32px;
+  margin-right: -32px;
+  padding: 32px;
+}
+@media (max-width: 1270px) {
+  .slider-tips__body {
+    margin-left: calc(-15px + -17 * ((100vw - 320px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .slider-tips__body {
+    margin-right: calc(-15px + -17 * ((100vw - 320px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .slider-tips__body {
+    padding: calc(15px + 17 * ((100vw - 320px) / 950));
+  }
+}
+.slider-tips__slide {
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .slider-tips__slide:hover {
+    box-shadow: 0 0 32px rgba(97, 97, 97, 0.2);
+  }
+}
+.slider-tips__image {
+  padding: 0 0 64.1943734015% 0;
+}
+.slider-tips__content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+.slider-tips__title {
+  flex: 1 1 auto;
+  color: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 24px;
+  transition: color 0.3s ease 0s;
+}
+@media (max-width: 1270px) {
+  .slider-tips__title {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 950));
+  }
+}
+.slider-tips__title:not(:last-child) {
+  margin: 0 0 8px 0;
+}
+@media (any-hover: hover) {
+  .slider-tips__title:hover {
+    color: #e89f71;
+  }
+}
+.slider-tips__text {
+  color: #898989;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.slider-tips__dotts {
+  padding-top: 8px;
+  justify-content: center;
+}
+@media (max-width: 1270px) {
+  .slider-tips__dotts {
+    padding-top: calc(0px + 8 * ((100vw - 320px) / 950));
+  }
+}
+.slider-tips__arrows {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: calc(100% - 48px);
+  left: 24px;
+  z-index: 5;
+  justify-content: space-between;
+}
+@media (min-width: 1282px) {
+  .slider-tips__arrows {
+    width: calc(100% + 48px);
+    left: -24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .slider-tips__arrows {
+    display: none;
+  }
+}
